@@ -22,3 +22,28 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+function enableTextEditing() {
+    const textElements = document.querySelectorAll("p b h2");
+
+    textElements.forEach(el => {
+        el.contentEditable = true;
+        el.style.border = '1px dashed #ccc';
+    });
+}
+
+function disableTextEditing() {
+    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
+        el.contentEditable = false;
+        el.style.border = 'none';
+    });
+}
+
+let isEditable = false;
+
+document.getElementById("edit").addEventListener('click', () => {
+    alert("Button is clicked");
+    if (isEditable) disableTextEditing();
+    else enableTextEditing();
+    isEditable = !isEditable;
+})
