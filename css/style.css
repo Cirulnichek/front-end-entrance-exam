@@ -17,6 +17,24 @@ body {
     padding: 20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-x: auto;
+}
+
+p {
+    word-break: break-word;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
 .group {
     display: flex;
     flex-direction: column;
@@ -27,12 +45,14 @@ body {
 .container1 {
     background-color: #f0f0f0;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .content {
     padding: 40px;
     box-sizing: border-box;
     border-radius: 15px;
+    max-width: 100%;
 }
 
 .active-content {
@@ -75,6 +95,18 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;;
+}
+
+.percent {
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;;
 }
 
 /*group2*/
@@ -234,6 +266,35 @@ body {
 
     #group4 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media print {
+    body * {
+        visibility: visible;
+    }
+
+    #group4 {
+        display: none;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    #toolsGroups {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #educationGroup {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button, nav, footer {
+        display: none !important;
     }
 }

@@ -13,7 +13,12 @@
     />
     <title>Vite App</title>
 </head>
-<body>
+<body class="print-container">
+<div id="group4" class="group">
+    <button id="edit" class="black-content">Редактировать</button>
+    <button id="save" class="active-content">Сохранить в PDF</button>
+    <button id="clear">Стереть</button>
+</div>
 <div id="group1" class="group">
     <img id="photo" src="public/myphoto.jpg" alt="My photo"/>
     <div id="introduction" class="container1 content">
@@ -24,20 +29,20 @@
     <div id="languages" class="container1 content">
         <h2>Languages</h2>
         <div style="display: grid; grid-template-columns: 1fr 5% 2% 3fr; gap: 10px; margin-top: auto">
-            <p>Russian</p>
-            <p>100</p>
+            <p class="language no-wrap">Russian</p>
+            <p class="percent no-wrap">100</p>
             <p>%</p>
             <div class="active-content" style="width: 100%; border-radius: 15px"></div>
-            <p>English</p>
-            <p>80</p>
+            <p class="language no-wrap">English</p>
+            <p class="percent no-wrap">80</p>
             <p>%</p>
             <div class="active-content" style="width: 80%; border-radius: 15px"></div>
-            <p>German</p>
-            <p>5</p>
+            <p class="language no-wrap">German</p>
+            <p class="percent no-wrap">5</p>
             <p>%</p>
             <div class="active-content" style="width: 5%; border-radius: 15px"></div>
-            <p>French</p>
-            <p>5</p>
+            <p class="language no-wrap">French</p>
+            <p class="percent no-wrap">5</p>
             <p>%</p>
             <div class="active-content" style="width: 5%; border-radius: 15px"></div>
         </div>
@@ -158,10 +163,6 @@
         <p>tegor247@gmail.com</p>
     </div>
 </div>
-<div id="group4" class="group">
-    <button id="edit">Редактировать</button>
-    <button id="save">Сохранить в PDF</button>
-</div>
-<script src="./js/main.js"></script>
+<script src="./src/main.js"></script>
 </body>
 </html>
